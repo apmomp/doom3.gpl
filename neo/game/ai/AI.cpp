@@ -2145,7 +2145,7 @@ bool idAI::NewWanderDir( const idVec3 &dest ) {
 	}
 
 	// try other directions
-	if ( ( gameLocal.random.RandomInt() & 1 ) || abs( deltay ) > abs( deltax ) ) {
+	if ( ( gameLocal.random.RandomInt() & 1 ) || abs(static_cast<long>(deltay) ) > abs(static_cast<long>(deltax) ) ) {
 		tdir = d[ 1 ];
 		d[ 1 ] = d[ 2 ];
 		d[ 2 ] = tdir;
